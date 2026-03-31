@@ -37,9 +37,9 @@ const ExperienceSection = () => {
                     <span className="text-xs uppercase tracking-[0.3em] text-cyan-500 font-bold mb-4 block">Development Experience</span>
                     <h2 className="text-4xl md:text-5xl font-black mb-16">My Journey</h2>
 
-                    <div className="relative space-y-16">
+                    <div className="relative space-y-10 md:space-y-16">
                         {/* Timeline Line */}
-                        <div className="absolute left-[30px] top-6 bottom-6 w-[1px] bg-gradient-to-b from-cyan-500/50 via-purple-500/50 to-pink-500/50" />
+                        <div className="absolute left-[22px] md:left-[30px] top-4 md:top-6 bottom-6 w-[1px] bg-gradient-to-b from-cyan-500/50 via-purple-500/50 to-pink-500/50" />
 
                         {experiences.map((exp, i) => (
                             <motion.div
@@ -48,31 +48,31 @@ const ExperienceSection = () => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.2 }}
-                                className="relative pl-24 group"
+                                className="relative pl-16 md:pl-24 group"
                             >
                                 {/* Timeline Dot */}
                                 <div className={`
-                    absolute left-0 top-0 w-16 h-16 rounded-[1.5rem] flex items-center justify-center z-10 
-                    transition-all duration-700 group-hover:rotate-[360deg] shadow-2xl
+                    absolute left-0 top-0 w-12 h-12 md:w-16 md:h-16 rounded-2xl md:rounded-[1.5rem] flex items-center justify-center z-10 
+                    transition-all duration-700 group-hover:rotate-[360deg] shadow-xl md:shadow-2xl
                     ${exp.color} text-black font-black
                 `}>
-                                    <FiBriefcase size={24} />
+                                    <FiBriefcase className="text-lg md:text-2xl" />
                                 </div>
 
                                 {/* Content Card */}
-                                <div className="glass-card glass-card-hover p-10 rounded-[3rem] border-white/5">
-                                    <div className="flex flex-wrap justify-between items-center gap-6 mb-8">
+                                <div className="glass-card glass-card-hover p-6 md:p-10 rounded-3xl md:rounded-[3rem] border-white/5">
+                                    <div className="flex flex-wrap justify-between items-center gap-4 md:gap-6 mb-4 md:mb-8">
                                         <div className="space-y-2">
-                                            <h4 className="text-2xl md:text-3xl font-black uppercase tracking-tighter text-neutral-900 dark:text-white leading-tight">{exp.role}</h4>
-                                            <div className="flex items-center gap-3">
-                                                <div className="w-2 h-2 rounded-full premium-gradient animate-pulse" />
-                                                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-cyan-500">
+                                            <h4 className="text-lg md:text-3xl font-black uppercase tracking-tighter text-neutral-900 dark:text-white leading-tight">{exp.role}</h4>
+                                            <div className="flex items-center gap-2 md:gap-3">
+                                                <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full premium-gradient animate-pulse" />
+                                                <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em] text-cyan-500">
                                                     {exp.period}
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
-                                    <p className="text-gray-500 dark:text-gray-400 leading-relaxed max-w-2xl font-medium">
+                                    <p className="text-sm md:text-base text-gray-500 dark:text-gray-400 leading-relaxed max-w-2xl font-medium">
                                         {exp.desc}
                                     </p>
 
@@ -81,9 +81,9 @@ const ExperienceSection = () => {
                                             href={exp.link}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="inline-flex items-center gap-4 mt-10 px-8 py-3 bg-gray-100 dark:bg-white/5 rounded-xl border border-gray-200 dark:border-white/5 text-[10px] font-black uppercase tracking-widest text-neutral-900 dark:text-white hover:bg-cyan-500 hover:text-black transition-all"
+                                            className="inline-flex items-center gap-3 md:gap-4 mt-6 md:mt-10 px-6 py-2 md:px-8 md:py-3 bg-gray-100 dark:bg-white/5 rounded-xl border border-gray-200 dark:border-white/5 text-[9px] md:text-[10px] font-black uppercase tracking-widest text-neutral-900 dark:text-white hover:bg-cyan-500 hover:text-black transition-all"
                                         >
-                                            <FiGithub size={16} />
+                                            <FiGithub className="text-sm md:text-base" />
                                             <span>Breakdown</span>
                                         </a>
                                     )}
