@@ -66,7 +66,7 @@ const Home = () => {
       </div>
 
       {/* 1. Hero Section - Clean Portrait Design */}
-      <section id="home" className="relative h-screen flex flex-col items-center justify-center overflow-hidden bg-white dark:bg-neutral-950">
+      <section id="home" className="relative h-screen flex flex-col items-center overflow-hidden bg-white dark:bg-neutral-950">
 
         {/* Background Text - Two Lines with Premium Golden Gradient */}
         <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-0">
@@ -74,7 +74,7 @@ const Home = () => {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
-            className="text-[12vw] md:text-[12vw] font-black leading-[0.85] uppercase tracking-tight hero-text-premium"
+            className="text-[26vw] md:text-[12vw] font-black leading-[0.85] uppercase tracking-tight hero-text-premium"
           >
             Software
           </motion.h1>
@@ -82,30 +82,32 @@ const Home = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
-            className="text-[12vw] md:text-[12vw] font-black leading-[0.85] uppercase tracking-tight hero-text-premium"
+            className="text-[26vw] md:text-[12vw] font-black leading-[0.85] uppercase tracking-tight hero-text-premium mt-2 md:mt-0"
           >
             Engineer
           </motion.h1>
         </div>
 
         {/* The Centered Portrait */}
-        <div className="relative z-30 w-full max-w-4xl px-4 flex justify-center h-full items-end pb-[5vh]">
+        <div className="relative z-30 w-full h-[65vh] mt-[15vh] md:mt-0 md:h-full md:max-w-4xl md:px-4 md:flex md:justify-center md:items-end md:pb-[5vh]">
           <motion.div
             initial={{ y: 150, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1.8, delay: 0.4, ease: "circOut" }}
-            className="relative portrait-mask scale-110 md:scale-125 origin-bottom"
+            className="relative w-full h-full md:w-auto md:h-auto portrait-mask md:scale-125 md:origin-bottom flex justify-center items-center md:items-end"
           >
             <img
               src="/assets/images/profile_new.jpg"
               alt="Nouman"
-              className="h-[75vh] md:h-[85vh] w-auto object-contain grayscale hover:grayscale-0 transition-all duration-1000 contrast-110 brightness-75 hover:brightness-100"
+              className="w-full h-full object-cover object-top md:h-[85vh] md:w-auto md:object-contain grayscale hover:grayscale-0 transition-all duration-1000 contrast-110 brightness-75 hover:brightness-100"
             />
           </motion.div>
+          {/* Gradient fade at bottom — mobile only */}
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white dark:from-neutral-950 to-transparent pointer-events-none md:hidden z-10" />
         </div>
 
         {/* Layer 5: Bottom Accents */}
-        <div className="absolute bottom-12 left-12 right-12 flex justify-between items-end z-30">
+        <div className="absolute bottom-8 left-0 right-0 px-6 md:bottom-12 md:left-12 md:right-12 flex justify-center md:justify-between items-end z-30">
           {/* Specialization Text */}
           <motion.div
             initial={{ x: -50, opacity: 0 }}
@@ -124,7 +126,7 @@ const Home = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 1 }}
           >
-            <ScrollLink to="contact" smooth={true} duration={500} className="pill-button group items-center cursor-pointer">
+            <ScrollLink to="contact" smooth={true} duration={500} className="pill-button group items-center cursor-pointer shadow-xl">
               <span>Let's chat</span>
               <div className="pill-icon group-hover:rotate-45 transition-transform duration-500">
                 <FiArrowRight size={20} />
