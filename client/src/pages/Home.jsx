@@ -74,7 +74,7 @@ const Home = () => {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
-            className="text-[26vw] md:text-[12vw] font-black leading-[0.85] uppercase tracking-tight hero-text-premium"
+            className="text-[18vw] md:text-[12vw] font-black leading-[0.85] uppercase tracking-tight hero-text-premium"
           >
             Software
           </motion.h1>
@@ -82,7 +82,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
-            className="text-[26vw] md:text-[12vw] font-black leading-[0.85] uppercase tracking-tight hero-text-premium mt-2 md:mt-0"
+            className="text-[18vw] md:text-[12vw] font-black leading-[0.85] uppercase tracking-tight hero-text-premium mt-2 md:mt-0"
           >
             Engineer
           </motion.h1>
@@ -107,13 +107,13 @@ const Home = () => {
         </div>
 
         {/* Layer 5: Bottom Accents */}
-        <div className="absolute bottom-8 left-0 right-0 px-6 md:bottom-12 md:left-12 md:right-12 flex justify-center md:justify-between items-end z-30">
+        <div className="absolute bottom-6 left-0 right-0 px-6 md:bottom-12 md:left-12 md:right-12 flex flex-col md:flex-row justify-center md:justify-between items-center md:items-end gap-6 md:gap-0 z-30">
           {/* Specialization Text */}
           <motion.div
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 1 }}
-            className="hero-specialization hidden md:block"
+            className="hero-specialization text-center md:text-left"
           >
             Specialized in full-stack web development, <br />
             MERN stack, and high-performance <br />
