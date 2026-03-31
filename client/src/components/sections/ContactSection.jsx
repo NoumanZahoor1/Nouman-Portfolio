@@ -29,61 +29,61 @@ const ContactSection = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="mb-16"
+                    className="mb-10 md:mb-16"
                 >
-                    <span className="text-xs uppercase tracking-[0.3em] text-cyan-500 font-bold mb-4 block">Get In Touch</span>
-                    <h2 className="text-4xl md:text-5xl font-black mb-16 uppercase tracking-wider">Contact Me</h2>
+                    <span className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-cyan-500 font-bold mb-4 block">Get In Touch</span>
+                    <h2 className="text-3xl md:text-5xl font-black mb-10 md:mb-16 uppercase tracking-wider">Contact Me</h2>
 
-                    <div className="grid lg:grid-cols-5 gap-16">
-                        <div className="lg:col-span-2 space-y-12">
-                            <div className="space-y-8">
-                                <div className="flex gap-8 items-center group">
-                                    <div className="w-20 h-20 glass-card glass-card-hover rounded-3xl flex items-center justify-center text-cyan-500 border-white/5 transition-all duration-700">
-                                        <FiMail size={28} />
+                    <div className="grid lg:grid-cols-5 gap-10 md:gap-16">
+                        <div className="lg:col-span-2 space-y-8 md:space-y-12">
+                            <div className="space-y-6 md:space-y-8">
+                                <div className="flex gap-6 md:gap-8 items-center group">
+                                    <div className="w-16 h-16 md:w-20 md:h-20 glass-card glass-card-hover rounded-2xl md:rounded-3xl flex items-center justify-center text-cyan-500 border-white/5 transition-all duration-700 shrink-0">
+                                        <FiMail className="text-xl md:text-[28px]" />
                                     </div>
-                                    <div>
-                                        <p className="text-[10px] font-black uppercase tracking-[0.3em] text-cyan-500/50 mb-2">Direct Mail</p>
-                                        <h4 className="text-xl font-black tracking-tighter text-neutral-900 dark:text-white">nomijatoi456@gmail.com</h4>
+                                    <div className="min-w-0">
+                                        <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em] text-cyan-500/50 mb-1 md:mb-2">Direct Mail</p>
+                                        <h4 className="text-sm md:text-xl font-black tracking-tighter text-neutral-900 dark:text-white truncate">nomijatoi456@gmail.com</h4>
                                     </div>
                                 </div>
 
-                                <div className="flex gap-8 items-center group">
-                                    <div className="w-20 h-20 glass-card glass-card-hover rounded-3xl flex items-center justify-center text-purple-500 border-white/5 transition-all duration-700">
-                                        <FiMapPin size={28} />
+                                <div className="flex gap-6 md:gap-8 items-center group">
+                                    <div className="w-16 h-16 md:w-20 md:h-20 glass-card glass-card-hover rounded-2xl md:rounded-3xl flex items-center justify-center text-purple-500 border-white/5 transition-all duration-700 shrink-0">
+                                        <FiMapPin className="text-xl md:text-[28px]" />
                                     </div>
-                                    <div>
-                                        <p className="text-[10px] font-black uppercase tracking-[0.3em] text-purple-500/50 mb-2">Location</p>
-                                        <h4 className="text-xl font-black tracking-tighter text-neutral-900 dark:text-white">Okara, Pakistan</h4>
+                                    <div className="min-w-0">
+                                        <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em] text-purple-500/50 mb-1 md:mb-2">Location</p>
+                                        <h4 className="text-sm md:text-xl font-black tracking-tighter text-neutral-900 dark:text-white truncate">Okara, Pakistan</h4>
                                     </div>
                                 </div>
 
-                                <div className="flex gap-8 items-center group">
-                                    <div className="w-20 h-20 glass-card glass-card-hover rounded-3xl flex items-center justify-center text-pink-500 border-white/5 transition-all duration-700">
-                                        <FiPhone size={28} />
+                                <div className="flex gap-6 md:gap-8 items-center group">
+                                    <div className="w-16 h-16 md:w-20 md:h-20 glass-card glass-card-hover rounded-2xl md:rounded-3xl flex items-center justify-center text-pink-500 border-white/5 transition-all duration-700 shrink-0">
+                                        <FiPhone className="text-xl md:text-[28px]" />
                                     </div>
-                                    <div>
-                                        <p className="text-[10px] font-black uppercase tracking-[0.3em] text-pink-500/50 mb-2">Phone</p>
-                                        <h4 className="text-xl font-black tracking-tighter text-neutral-900 dark:text-white">+92 317 7543733</h4>
+                                    <div className="min-w-0">
+                                        <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em] text-pink-500/50 mb-1 md:mb-2">Phone</p>
+                                        <h4 className="text-sm md:text-xl font-black tracking-tighter text-neutral-900 dark:text-white truncate">+92 317 7543733</h4>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="p-10 glass-card rounded-[2.5rem] border-cyan-500/10 relative overflow-hidden">
+                            <div className="p-6 md:p-10 glass-card rounded-3xl md:rounded-[2.5rem] border-cyan-500/10 relative overflow-hidden">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 blur-3xl rounded-full" />
-                                <h3 className="text-2xl font-black mb-4 leading-tight uppercase tracking-wider text-neutral-900 dark:text-white">Let's build <br /> something great!</h3>
-                                <p className="text-sm text-gray-500 leading-relaxed mb-0 font-medium">I'm currently available for freelance work and full-time opportunities.</p>
+                                <h3 className="text-xl md:text-2xl font-black mb-3 md:mb-4 leading-tight uppercase tracking-wider text-neutral-900 dark:text-white">Let's build <br /> something great!</h3>
+                                <p className="text-xs md:text-sm text-gray-500 leading-relaxed mb-0 font-medium">I'm currently available for freelance work and full-time opportunities.</p>
                             </div>
                         </div>
 
                         <div className="lg:col-span-3">
-                            <form onSubmit={handleSubmit} className="space-y-6">
-                                <div className="grid md:grid-cols-2 gap-6">
+                            <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6 mt-10 lg:mt-0">
+                                <div className="grid md:grid-cols-2 gap-4 md:gap-6">
                                     <input
                                         type="text"
                                         placeholder="NAME"
                                         value={formData.name}
                                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                        className="w-full bg-gray-100 dark:bg-white/5 border-none rounded-2xl p-6 text-xs font-black tracking-widest focus:ring-2 ring-cyan-500 transition-all outline-none"
+                                        className="w-full bg-gray-100 dark:bg-white/5 border-none rounded-xl md:rounded-2xl p-4 md:p-6 text-[10px] md:text-xs font-black tracking-widest focus:ring-2 ring-cyan-500 transition-all outline-none"
                                         required
                                     />
                                     <input
@@ -91,7 +91,7 @@ const ContactSection = () => {
                                         placeholder="EMAIL"
                                         value={formData.email}
                                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                        className="w-full bg-gray-100 dark:bg-white/5 border-none rounded-2xl p-6 text-xs font-black tracking-widest focus:ring-2 ring-cyan-500 transition-all outline-none"
+                                        className="w-full bg-gray-100 dark:bg-white/5 border-none rounded-xl md:rounded-2xl p-4 md:p-6 text-[10px] md:text-xs font-black tracking-widest focus:ring-2 ring-cyan-500 transition-all outline-none"
                                         required
                                     />
                                 </div>
@@ -100,23 +100,23 @@ const ContactSection = () => {
                                     placeholder="SUBJECT"
                                     value={formData.subject}
                                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                                    className="w-full bg-gray-100 dark:bg-white/5 border-none rounded-2xl p-6 text-xs font-black tracking-widest focus:ring-2 ring-cyan-500 transition-all outline-none"
+                                    className="w-full bg-gray-100 dark:bg-white/5 border-none rounded-xl md:rounded-2xl p-4 md:p-6 text-[10px] md:text-xs font-black tracking-widest focus:ring-2 ring-cyan-500 transition-all outline-none"
                                     required
                                 />
                                 <textarea
                                     placeholder="MESSAGE"
-                                    rows="6"
+                                    rows="5"
                                     value={formData.message}
                                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                                    className="w-full bg-gray-100 dark:bg-white/5 border-none rounded-[2rem] p-8 text-xs font-black tracking-widest focus:ring-2 ring-cyan-500 transition-all outline-none resize-none"
+                                    className="w-full bg-gray-100 dark:bg-white/5 border-none rounded-2xl md:rounded-[2rem] p-5 md:p-8 text-[10px] md:text-xs font-black tracking-widest focus:ring-2 ring-cyan-500 transition-all outline-none resize-none"
                                     required
                                 ></textarea>
 
                                 <button
                                     disabled={loading}
-                                    className="w-full py-6 premium-gradient text-black font-black uppercase tracking-[0.5em] text-[10px] rounded-[2rem] hover:scale-105 active:scale-95 transition-all shadow-2x shadow-cyan-500/20 flex items-center justify-center gap-4 premium-button"
+                                    className="w-full py-4 md:py-6 premium-gradient text-black font-black uppercase tracking-[0.5em] text-[9px] md:text-[10px] rounded-2xl md:rounded-[2rem] hover:scale-105 active:scale-95 transition-all shadow-2x shadow-cyan-500/20 flex items-center justify-center gap-3 md:gap-4 premium-button"
                                 >
-                                    {loading ? 'Sending...' : <><FiSend /> Send Message</>}
+                                    {loading ? 'Sending...' : <><FiSend className="text-sm md:text-base"/> Send Message</>}
                                 </button>
                             </form>
                         </div>
