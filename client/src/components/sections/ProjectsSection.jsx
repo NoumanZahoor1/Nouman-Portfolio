@@ -13,6 +13,47 @@ const ProjectsSection = () => {
 
     const staticProjects = [
         {
+            _id: 'naa-store',
+            title: 'NAA Store',
+            category: 'Web',
+            description: 'A full-stack MERN e-commerce platform with 4 AI-powered features (voice search, BLIP visual search, LLM chatbot).',
+            longDescription: `
+### NAA Store (MERN E-commerce)
+
+Built and deployed a full-stack MERN e-commerce platform with 4 AI-powered features: voice search, image-based product discovery (BLIP), LLM chatbot, and personalized size recommendations.
+
+🌟 **Key Features**
+- **AI-Powered:** Voice search, BLIP visual search, LLM chatbot
+- **Security:** JWT authentication, bcrypt hashing, role-based access control
+- **Database:** MongoDB architecture with 6+ collections
+- **Payments:** Integrated Stripe Checkout with webhook validation
+- **Performance:** Lazy loading, code splitting, image compression (90+ Lighthouse mobile score)
+`,
+            githubLink: 'https://github.com/NoumanZahoor1/NAA-Ecommerce-Project-',
+            liveLink: 'https://naa-store.vercel.app/',
+            image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop&q=60'
+        },
+        {
+            _id: 'naa-fashion',
+            title: 'NAA Fashion',
+            category: 'Web',
+            description: 'A polished multi-page fashion storefront with animated showcases and dynamic cart using Vanilla JS.',
+            longDescription: `
+### NAA Fashion
+
+Built a polished multi-page fashion storefront with animated product showcases, dynamic cart, promotional countdowns, and a custom admin dashboard — zero framework dependencies.
+
+👗 **Features**
+- **No Frameworks:** Built entirely with HTML5, CSS3, and Vanilla JavaScript
+- **User Experience:** Animated product showcases, testimonial sliders, promotional countdowns
+- **Functionality:** Category filtering, dynamic cart, complete browse-to-checkout flow
+- **Admin:** Custom admin dashboard
+`,
+            githubLink: 'https://github.com/NoumanZahoor1/Clothing-Store',
+            liveLink: 'https://clothing-store-steel-phi.vercel.app/',
+            image: 'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=800&auto=format&fit=crop&q=60'
+        },
+        {
             _id: 'parallel-image-filter',
             title: 'Parallel Image Filter',
             category: 'AI',
@@ -41,6 +82,50 @@ Perfect for Parallel & Distributed Computing (PDC) labs or understanding thread-
 `,
             githubLink: 'https://github.com/NoumanZahoor1/Parallel-Image-Filter-',
             image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=60'
+        },
+        {
+            _id: 'arduino-smart-car',
+            title: 'Arduino Smart Car',
+            category: 'Embedded',
+            description: 'A robotic car supporting Bluetooth control, voice commands, and autonomous obstacle avoidance.',
+            longDescription: `
+### Arduino Smart Car Robot
+
+Engineered a multi-mode robotic car supporting Bluetooth smartphone control, serial voice command parsing, and fully autonomous obstacle avoidance.
+
+🤖 **Features**
+- **Bluetooth Control:** Smartphone app control via HC-05
+- **Voice Commands:** Serial voice command parsing
+- **Autonomous Mode:** Fully autonomous obstacle avoidance
+- **Sensors:** Servo-mounted ultrasonic scanning (HC-SR04) to assess clearance and autonomously choose the safer direction when blocked.
+
+🛠️ **Tech Stack**
+- Arduino UNO, L293D motor driver, HC-05 Bluetooth module, HC-SR04 ultrasonic sensor, C++
+`,
+            githubLink: 'https://github.com/NoumanZahoor1/Arduino-Smart-Car-Robot-with-Bluetooth-Voice-and-Obstacle-Avoidance',
+            image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=60'
+        },
+        {
+            _id: 'human-following-robot',
+            title: 'Human-Following Robot',
+            category: 'Embedded',
+            description: 'An autonomous robot that detects and tracks a person using ultrasonic and IR sensors.',
+            longDescription: `
+### Human-Following Robot
+
+Built an autonomous robot that detects and tracks a person using ultrasonic distance sensing and IR proximity detection mounted on a servo-scanning assembly.
+
+🏃‍♂️ **Features**
+- **Object Tracking:** Detects and tracks a person in real-time
+- **Sensors:** Ultrasonic distance sensing and IR proximity detection
+- **Mechanism:** Servo-scanning assembly for wider field of view
+- **Logic:** Real-time decision logic in Arduino C++ to command motor direction based on live sensor data.
+
+🛠️ **Tech Stack**
+- Arduino UNO, HC-SR04, IR Sensor, Servo Motor, L298N, C++
+`,
+            githubLink: 'https://github.com/NoumanZahoor1/Human-Following-Robot',
+            image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=60'
         },
         {
             _id: 'image-caption-generator',
@@ -130,7 +215,7 @@ This project is created for educational purposes only. Netflix is a registered t
         fetchProjects()
     }, [])
 
-    const categories = ['all', 'Web', 'AI']
+    const categories = ['all', 'Web', 'AI', 'Embedded']
     const filteredProjects = filter === 'all'
         ? projects
         : projects.filter(p => p.category === filter)
@@ -303,10 +388,10 @@ This project is created for educational purposes only. Netflix is a registered t
                                         </h3>
                                     </div>
 
-                                    <div className="prose prose-invert prose-cyan prose-sm max-w-none leading-relaxed selection:bg-cyan-500/30
-                                        prose-headings:text-white prose-headings:font-black prose-headings:uppercase prose-headings:tracking-wide
-                                        prose-p:text-gray-400 prose-li:text-gray-400 prose-strong:text-white
-                                        prose-ul:space-y-1 prose-li:marker:text-cyan-500">
+                                    <div className="prose prose-cyan prose-sm max-w-none leading-relaxed selection:bg-cyan-500/30 text-gray-300
+                                        prose-headings:!text-white prose-headings:!font-black prose-headings:!uppercase prose-headings:!tracking-wide
+                                        prose-p:!text-gray-300 prose-li:!text-gray-300 prose-strong:!text-white
+                                        prose-ul:space-y-1 prose-li:marker:!text-cyan-500">
                                         <ReactMarkdown>
                                             {selectedProject.longDescription || selectedProject.description}
                                         </ReactMarkdown>
