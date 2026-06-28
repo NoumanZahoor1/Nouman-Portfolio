@@ -13,7 +13,7 @@ const seedAdmin = async () => {
 
         const adminUser = {
             username: 'Nouman',
-            email: 'nomijatoi456@gmail.com',
+            email: 'noumanzahoor.cs@gmail.com',
             password: 'password123', // I'll set a default one and tell the user
             role: 'admin'
         };
@@ -21,7 +21,7 @@ const seedAdmin = async () => {
         await User.create(adminUser);
 
         console.log('✅ Admin user created successfully!');
-        console.log('Email: nomijatoi456@gmail.com');
+        console.log('Email: noumanzahoor.cs@gmail.com');
         console.log('Password: password123');
         process.exit(0);
     } catch (error) {
