@@ -43,7 +43,7 @@ const ContactSection = () => {
                                     </div>
                                     <div className="min-w-0">
                                         <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em] text-cyan-500/50 mb-1 md:mb-2">Direct Mail</p>
-                                        <h4 className="text-sm md:text-xl font-black tracking-tighter text-neutral-900 dark:text-white truncate">nomijatoi456@gmail.com</h4>
+                                        <h4 className="text-sm md:text-xl font-black tracking-tighter text-neutral-900 dark:text-white truncate">noumanzahoor.cs@gmail.com</h4>
                                     </div>
                                 </div>
 
