@@ -1,526 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nouman Zahoor — CV</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <!-- Favicon: N monogram -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23050505'/><text x='50' y='72' font-family='Arial Black,sans-serif' font-size='62' font-weight='900' fill='%2306b6d4' text-anchor='middle'>N</text></svg>" />
 
-    body {
-      font-family: 'Georgia', serif;
-      font-size: 13.5px;
-      color: #222;
-      background: #f4f6f9;
-      padding: 30px 10px;
-    }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="21815lIgo_F94SBuc4hRa0XBCD49_XZyfraYs8ZWAeY" />
 
-    .page {
-      max-width: 860px;
-      margin: 0 auto;
-      background: #fff;
-      padding: 48px 56px;
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
-      border-radius: 4px;
-    }
+    <!-- Primary SEO -->
+    <title>Nouman Portfolio | Nouman Zahoor - Full-Stack Developer & AI Engineer</title>
+    <meta name="description" content="Nouman Portfolio - Explore the projects and skills of Nouman Zahoor, Full-Stack MERN Developer and AI Engineer specializing in React, Node.js, Python, and scalable web apps." />
+    <meta name="keywords" content="Nouman Portfolio, Nouman Zahoor, Full Stack Developer, MERN Stack, AI Engineer, React, Node.js, Python, Portfolio, Pakistan Developer, COMSATS" />
+    <meta name="author" content="Nouman Zahoor" />
 
-    /* ---- HEADER ---- */
-    .header {
-      text-align: center;
-      margin-bottom: 6px;
-    }
+    <!-- Open Graph (LinkedIn, Facebook, WhatsApp) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nouman Portfolio | Nouman Zahoor - Full-Stack Developer & AI Engineer" />
+    <meta property="og:description" content="Nouman Portfolio - Explore the projects and skills of Nouman Zahoor, Full-Stack MERN Developer and AI Engineer specializing in React, Node.js, Python, and scalable web apps." />
+    <meta property="og:image" content="/assets/images/profile_new.jpg" />
+    <meta property="og:url" content="https://nouman-portfolio-official.vercel.app/" />
+    <meta property="og:site_name" content="Nouman Portfolio" />
 
-    .header h1 {
-      font-size: 2.2em;
-      font-weight: 700;
-      color: #163A70;
-      letter-spacing: 1px;
-      margin-bottom: 8px;
-    }
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nouman Portfolio | Nouman Zahoor - Full-Stack Developer & AI Engineer" />
+    <meta name="twitter:description" content="Nouman Portfolio - Explore the projects and skills of Nouman Zahoor, Full-Stack MERN Developer and AI Engineer specializing in React, Node.js, Python, and scalable web apps." />
+    <meta name="twitter:image" content="/assets/images/profile_new.jpg" />
 
-    .contact-line {
-      font-size: 12.5px;
-      color: #444;
-      margin-bottom: 5px;
-    }
-
-    .contact-line span {
-      margin: 0 6px;
-      color: #aaa;
-    }
-
-    .links-line {
-      font-size: 12.5px;
-      margin-bottom: 4px;
-    }
-
-    .links-line a {
-      color: #1F5FBF;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: 500;
-    }
-
-    .links-line a:hover {
-      text-decoration: underline;
-    }
-
-    .links-line .sep {
-      color: #bbb;
-      margin: 0 2px;
-    }
-
-    .header-rule {
-      border: none;
-      border-top: 1.5px solid #163A70;
-      margin: 10px 0 0 0;
-    }
-
-    /* ---- SECTIONS ---- */
-    section {
-      margin-top: 18px;
-    }
-
-    .section-title {
-      font-size: 13px;
-      font-variant: small-caps;
-      font-weight: 700;
-      color: #163A70;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      border-bottom: 1.5px solid #163A70;
-      padding-bottom: 3px;
-      margin-bottom: 10px;
-    }
-
-    /* ---- SUMMARY ---- */
-    .summary p {
-      font-size: 12.8px;
-      line-height: 1.65;
-      color: #333;
-    }
-
-    /* ---- SKILLS ---- */
-    .skills-grid {
-      font-size: 12.5px;
-      line-height: 1.9;
-    }
-
-    .skills-grid .skill-row {
-      margin-bottom: 1px;
-    }
-
-    .skills-grid strong {
-      color: #163A70;
-    }
-
-    /* ---- EXPERIENCE ---- */
-    .exp-item {
-      margin-bottom: 14px;
-    }
-
-    .exp-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-
-    .exp-title {
-      font-weight: 700;
-      font-size: 13.2px;
-      color: #111;
-    }
-
-    .exp-location {
-      font-size: 12px;
-      color: #555;
-      font-style: italic;
-    }
-
-    .exp-company {
-      font-size: 12.2px;
-      color: #444;
-      font-style: italic;
-      margin-bottom: 5px;
-    }
-
-    .exp-company a {
-      color: #1F5FBF;
-      text-decoration: none;
-    }
-
-    .exp-company a:hover {
-      text-decoration: underline;
-    }
-
-    ul.bullets {
-      margin-left: 18px;
-      margin-top: 3px;
-    }
-
-    ul.bullets li {
-      font-size: 12.4px;
-      line-height: 1.6;
-      color: #333;
-      margin-bottom: 3px;
-    }
-
-    /* ---- PROJECTS ---- */
-    .project-item {
-      margin-bottom: 14px;
-    }
-
-    .project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      flex-wrap: wrap;
-      gap: 4px;
-    }
-
-    .project-name {
-      font-weight: 700;
-      font-size: 13px;
-      color: #111;
-    }
-
-    .project-tech {
-      font-weight: 400;
-      font-size: 12px;
-      color: #555;
-      font-style: italic;
-    }
-
-    .project-links {
-      font-size: 12px;
-      white-space: nowrap;
-    }
-
-    .project-links a {
-      color: #1F5FBF;
-      text-decoration: none;
-      margin-left: 10px;
-    }
-
-    .project-links a:hover {
-      text-decoration: underline;
-    }
-
-    .project-links .sep {
-      color: #bbb;
-      margin-left: 10px;
-    }
-
-    /* ---- EDUCATION ---- */
-    .edu-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-
-    .edu-name {
-      font-weight: 700;
-      font-size: 13.2px;
-      color: #111;
-    }
-
-    .edu-name a {
-      color: #1F5FBF;
-      font-size: 11.5px;
-      font-weight: 400;
-      text-decoration: none;
-      margin-left: 6px;
-    }
-
-    .edu-name a:hover {
-      text-decoration: underline;
-    }
-
-    .edu-date {
-      font-size: 12px;
-      color: #555;
-      font-style: italic;
-    }
-
-    .edu-degree {
-      font-size: 12.5px;
-      color: #444;
-      font-style: italic;
-      margin-bottom: 4px;
-    }
-
-    /* ---- LANGUAGES ---- */
-    .languages p {
-      font-size: 12.5px;
-      color: #333;
-    }
-
-    .languages strong {
-      color: #163A70;
-    }
-
-    /* ---- PRINT ---- */
-    @media print {
-      body {
-        background: #fff;
-        padding: 0;
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Nouman Zahoor",
+        "jobTitle": "Full-Stack Developer & AI Engineer",
+        "url": "https://nouman-portfolio-official.vercel.app/",
+        "sameAs": [
+          "https://github.com/NoumanZahoor1",
+          "https://www.linkedin.com/in/nouman-zahoor-jatoi-2b1815338/"
+        ],
+        "alumniOf": "COMSATS University Islamabad",
+        "knowsAbout": ["MERN Stack", "React", "Node.js", "Python", "Artificial Intelligence", "Machine Learning"]
       }
-
-      .page {
-        box-shadow: none;
-        padding: 32px 40px;
-        border-radius: 0;
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Nouman Portfolio",
+        "url": "https://nouman-portfolio-official.vercel.app/"
       }
-    }
-  </style>
-</head>
-
-<body>
-  <div class="page">
-
-    <!-- HEADER -->
-    <div class="header">
-      <h1>Nouman Zahoor</h1>
-      <div class="contact-line">
-        <i class="fas fa-map-marker-alt"></i> Okara, Pakistan
-        <span>|</span>
-        <i class="fas fa-phone"></i> +92 317 754 3733
-        <span>|</span>
-        <i class="fas fa-envelope"></i>
-        <a href="mailto:noumanzahoor.cs@gmail.com"
-          style="color:#1F5FBF;text-decoration:none;">noumanzahoor.cs@gmail.com</a>
-      </div>
-      <div class="links-line">
-        <i class="fab fa-linkedin"></i>
-        <a href="https://linkedin.com/in/nouman-zahoor-jatoi" target="_blank">LinkedIn</a>
-        <span class="sep">|</span>
-        <i class="fab fa-github"></i>
-        <a href="https://github.com/NoumanZahoor1" target="_blank">GitHub</a>
-        <span class="sep">|</span>
-        <i class="fas fa-globe"></i>
-        <a href="https://nouman-portfolio-official.vercel.app/" target="_blank">Portfolio</a>
-      </div>
-      <hr class="header-rule" />
-    </div>
-
-    <!-- PROFESSIONAL SUMMARY -->
-    <section class="summary">
-      <div class="section-title">Professional Summary</div>
-      <p>Full-Stack Developer with hands-on experience building and deploying MERN applications, secure REST APIs, and
-        AI-powered web features including LLM chatbots, voice search, and image-based product discovery. Strong
-        foundation in responsive frontend development, backend architecture, and performance optimization, with
-        internship and freelance experience across remote teams and international client-facing projects.</p>
-    </section>
-
-    <!-- TECHNICAL SKILLS -->
-    <section>
-      <div class="section-title">Technical Skills</div>
-      <div class="skills-grid">
-        <div class="skill-row"><strong>Languages:</strong> JavaScript (ES6+), Python, C/C++, HTML5, CSS3</div>
-        <div class="skill-row"><strong>Frontend:</strong> React.js, Tailwind CSS, Framer Motion, Context API</div>
-        <div class="skill-row"><strong>Backend:</strong> Node.js, Express.js, REST APIs, JWT Authentication, bcrypt,
-          Middleware</div>
-        <div class="skill-row"><strong>Database:</strong> MongoDB, Mongoose, Schema Design</div>
-        <div class="skill-row"><strong>AI / ML:</strong> OpenCV, BLIP, LangChain, Streamlit, OpenAI API, Gemini API
-        </div>
-        <div class="skill-row"><strong>Embedded / IoT:</strong> Arduino UNO, Servo Motors, Ultrasonic &amp; IR Sensors,
-          HC-05 Bluetooth, L298N / L293D</div>
-        <div class="skill-row"><strong>Tools &amp; Platforms:</strong> Git, GitHub, Vercel, Netlify, Postman, Stripe
-          API, WordPress, VS Code, Jupyter Notebook</div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section>
-      <div class="section-title">Experience</div>
-
-      <div class="exp-item">
-        <div class="exp-header">
-          <span class="exp-title">Full-Stack Developer Intern</span>
-          <span class="exp-location">Remote</span>
-        </div>
-        <div class="exp-company">Developers Hub — <a href="https://developershub.com"
-            target="_blank">developershub.com</a></div>
-        <ul class="bullets">
-          <li>Delivered full-stack MERN features in a distributed Agile team, contributing to sprint-based releases
-            across frontend, backend, and API layers.</li>
-          <li>Designed and integrated REST API endpoints for authentication, data retrieval, and CRUD workflows with
-            validation, middleware, and structured error handling.</li>
-          <li>Built reusable and responsive React components for core user flows, ensuring consistent performance across
-            desktop and mobile devices.</li>
-        </ul>
-      </div>
-
-      <div class="exp-item">
-        <div class="exp-header">
-          <span class="exp-title">Full-Stack Developer Intern</span>
-          <span class="exp-location">Remote</span>
-        </div>
-        <div class="exp-company">CodeAlpha — <a href="https://codealpha.tech" target="_blank">codealpha.tech</a></div>
-        <ul class="bullets">
-          <li>Developed a responsive multi-page e-commerce storefront with product browsing, cart functionality, and an
-            admin dashboard using HTML5, CSS3, and Vanilla JavaScript.</li>
-          <li>Organized the frontend codebase with modular JavaScript and reusable utility functions, improving
-            maintainability without relying on external frameworks.</li>
-          <li>Managed source control with Git and GitHub, maintaining a consistent and documented commit history
-            throughout the internship.</li>
-        </ul>
-      </div>
-
-      <div class="exp-item">
-        <div class="exp-header">
-          <span class="exp-title">Freelance Web Developer</span>
-          <span class="exp-location">Remote</span>
-        </div>
-        <div class="exp-company">SM Chartered Accountants — Dubai, UAE — <a href="https://smcharteredaccountants.com"
-            target="_blank">smcharteredaccountants.com</a></div>
-        <ul class="bullets">
-          <li>Redesigned and rebuilt the company website end-to-end, improving service pages, team profiles, FAQs, and
-            lead-capture contact flows.</li>
-          <li>Implemented technical on-page SEO using semantic HTML, meta optimization, and structured content to
-            strengthen search visibility and Lighthouse score.</li>
-          <li>Delivered a fully responsive website optimized for users across UAE, UK, and Pakistan markets.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section>
-      <div class="section-title">Projects</div>
-
-      <div class="project-item">
-        <div class="project-header">
-          <div>
-            <span class="project-name">NAA Store</span>
-            <span class="project-tech"> | MERN, Stripe, OpenAI, BLIP, Web Speech API</span>
-          </div>
-          <div class="project-links">
-            <i class="fab fa-github"></i><a href="https://github.com/NoumanZahoor1/NAA-Ecommerce-Project-"
-              target="_blank">GitHub</a>
-            <span class="sep">|</span>
-            <i class="fas fa-link"></i><a href="https://naa-store.vercel.app/" target="_blank">Live</a>
-          </div>
-        </div>
-        <ul class="bullets">
-          <li>Built and deployed a full-stack MERN e-commerce platform with 4 AI-powered features: voice search,
-            image-based product discovery (BLIP), LLM chatbot, and personalized size recommendations.</li>
-          <li>Designed a MongoDB architecture with 6+ collections and implemented JWT authentication, bcrypt hashing,
-            and role-based access control for customer and admin workflows.</li>
-          <li>Integrated Stripe Checkout with webhook validation and optimized frontend performance via lazy loading,
-            code splitting, and image compression, achieving a 90+ Lighthouse mobile score.</li>
-        </ul>
-      </div>
-
-      <div class="project-item">
-        <div class="project-header">
-          <div>
-            <span class="project-name">NAA Fashion</span>
-            <span class="project-tech"> | HTML5, CSS3, Vanilla JavaScript</span>
-          </div>
-          <div class="project-links">
-            <i class="fab fa-github"></i><a href="https://github.com/NoumanZahoor1/Clothing-Store"
-              target="_blank">GitHub</a>
-            <span class="sep">|</span>
-            <i class="fas fa-link"></i><a href="https://clothing-store-steel-phi.vercel.app/" target="_blank">Live</a>
-          </div>
-        </div>
-        <ul class="bullets">
-          <li>Built a polished multi-page fashion storefront with animated product showcases, dynamic cart, promotional
-            countdowns, and a custom admin dashboard — zero framework dependencies.</li>
-          <li>Implemented category filtering, testimonial sliders, and a complete browse-to-checkout flow using pure
-            HTML5, CSS3, and Vanilla JavaScript.</li>
-        </ul>
-      </div>
-
-      <div class="project-item">
-        <div class="project-header">
-          <div>
-            <span class="project-name">Parallel Image Processing Benchmarking App</span>
-            <span class="project-tech"> | Python, OpenCV, Streamlit, Multithreading</span>
-          </div>
-          <div class="project-links">
-            <i class="fab fa-github"></i><a href="https://github.com/NoumanZahoor1/Parallel-Image-Filter-"
-              target="_blank">GitHub</a>
-          </div>
-        </div>
-        <ul class="bullets">
-          <li>Developed a benchmarking tool comparing sequential and multithreaded image processing across 5+ filter
-            operations using Python and OpenCV.</li>
-          <li>Visualized performance gains through an interactive Streamlit dashboard, demonstrating up to 3.5x speed
-            improvement on multi-core CPUs using Amdahl's Law.</li>
-        </ul>
-      </div>
-
-      <div class="project-item">
-        <div class="project-header">
-          <div>
-            <span class="project-name">Human-Following Robot</span>
-            <span class="project-tech"> | Arduino UNO, HC-SR04, IR Sensor, Servo Motor, L298N, C++</span>
-          </div>
-          <div class="project-links">
-            <i class="fab fa-github"></i><a href="https://github.com/NoumanZahoor1/Human-Following-Robot"
-              target="_blank">GitHub</a>
-          </div>
-        </div>
-        <ul class="bullets">
-          <li>Built an autonomous robot that detects and tracks a person using ultrasonic distance sensing and IR
-            proximity detection mounted on a servo-scanning assembly.</li>
-          <li>Implemented real-time decision logic in Arduino C++ to command motor direction based on live sensor data.
-          </li>
-        </ul>
-      </div>
-
-      <div class="project-item">
-        <div class="project-header">
-          <div>
-            <span class="project-name">Arduino Smart Car Robot</span>
-            <span class="project-tech"> | Arduino UNO, L293D, HC-05 Bluetooth, HC-SR04, C++</span>
-          </div>
-          <div class="project-links">
-            <i class="fab fa-github"></i><a
-              href="https://github.com/NoumanZahoor1/Arduino-Smart-Car-Robot-with-Bluetooth-Voice-and-Obstacle-Avoidance"
-              target="_blank">GitHub</a>
-          </div>
-        </div>
-        <ul class="bullets">
-          <li>Engineered a multi-mode robotic car supporting Bluetooth smartphone control, serial voice command parsing,
-            and fully autonomous obstacle avoidance.</li>
-          <li>Implemented servo-mounted ultrasonic scanning to assess clearance and autonomously choose the safer
-            direction when blocked.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section>
-      <div class="section-title">Education</div>
-      <div class="edu-header">
-        <span class="edu-name">
-          COMSATS University Islamabad, Sahiwal Campus
-          <a href="https://sahiwal.comsats.edu.pk/" target="_blank">sahiwal.comsats.edu.pk</a>
-        </span>
-        <span class="edu-date">Graduated June 2026</span>
-      </div>
-      <div class="edu-degree">Bachelor of Science in Computer Science</div>
-      <ul class="bullets">
-        <li><em>Relevant Coursework:</em> Data Structures &amp; Algorithms, Database Systems, Web Engineering, Software
-          Engineering, Operating Systems, Computer Networks, Computer Vision, Artificial Intelligence, OOP</li>
-      </ul>
-    </section>
-
-    <!-- LANGUAGES -->
-    <section class="languages">
-      <div class="section-title">Languages</div>
-      <p><strong>English:</strong> Professional working proficiency &nbsp;&nbsp;&nbsp; <strong>Urdu:</strong> Native</p>
-    </section>
-
-  </div>
-</body>
-
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
