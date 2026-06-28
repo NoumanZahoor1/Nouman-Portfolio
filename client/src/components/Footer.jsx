@@ -67,7 +67,7 @@ const Footer = () => {
               {[
                 { icon: FiGithub, href: 'https://github.com/NoumanZahoor1' },
                 { icon: FiLinkedin, href: 'https://www.linkedin.com/in/nouman-zahoor-jatoi-2b1815338/' },
-                { icon: FiMail, href: 'mailto:nomijatoi456@gmail.com' }
+                { icon: FiMail, href: 'mailto:noumanzahoor.cs@gmail.com' }
               ].map((social, i) => (
                 <a
                   key={i}
@@ -100,7 +100,7 @@ const Footer = () => {
             <ul className="space-y-6">
               <li>
                 <p className="text-[9px] font-black uppercase tracking-[0.2em] text-gray-600 mb-1">Email</p>
-                <a href="mailto:nomijatoi456@gmail.com" className="text-sm font-bold text-gray-400 hover:text-cyan-500 transition-colors">nomijatoi456@gmail.com</a>
+                <a href="mailto:noumanzahoor.cs@gmail.com" className="text-sm font-bold text-gray-400 hover:text-cyan-500 transition-colors">nomijatoi456@gmail.com</a>
               </li>
               <li>
                 <p className="text-[9px] font-black uppercase tracking-[0.2em] text-gray-600 mb-1">Phone</p>
