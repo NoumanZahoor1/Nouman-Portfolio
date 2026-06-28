@@ -25,7 +25,7 @@ const Sidebar = () => {
         { icon: FiGithub, url: 'https://github.com/NoumanZahoor1', label: 'GitHub' },
         { icon: FiLinkedin, url: 'https://www.linkedin.com/in/nouman-zahoor-jatoi-2b1815338/', label: 'LinkedIn' },
         { icon: FiTwitter, url: 'https://twitter.com', label: 'Twitter' },
-        { icon: FiMail, url: 'mailto:nomijatoi456@gmail.com', label: 'Email' },
+        { icon: FiMail, url: 'mailto:noumanzahoor.cs@gmail.com', label: 'Email' },
     ]
 
     return (
